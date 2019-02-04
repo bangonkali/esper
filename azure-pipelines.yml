@@ -26,6 +26,9 @@ jobs:
   - script: python -m pip install -U platformio
     displayName: 'Install dependencies'
 
+  - script: platformio ci -C firmware/platformio.ini -v ./firmware/.
+    displayName: 'Build firmware'
+
   # - task: PublishTestResults@2
   #   inputs:
   #     testResultsFiles: '**/test-results.xml'
